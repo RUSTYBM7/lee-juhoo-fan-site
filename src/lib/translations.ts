@@ -6,6 +6,7 @@ export const translations = {
       community: 'Community',
       contact: 'Contact',
       kathy: 'About Kathy',
+      museum: 'Career Museum',
     },
     hero: {
       title: 'LEE JUHOO',
@@ -291,6 +292,7 @@ export const translations = {
       community: '커뮤니티',
       contact: '문의',
       kathy: '캐시 소개',
+      museum: '경력 미술관',
     },
     hero: {
       title: '이주후',

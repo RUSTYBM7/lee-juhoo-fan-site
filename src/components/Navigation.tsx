@@ -26,6 +26,7 @@ const Navigation = () => {
     { path: '/news', label: t.nav.news },
     { path: '/community', label: t.nav.community },
     { path: '/contact', label: t.nav.contact },
+    { path: '/museum', label: t.nav.museum },
   ];
 
   return (

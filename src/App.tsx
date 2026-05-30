@@ -6,6 +6,7 @@ import News from './pages/News';
 import Community from './pages/Community';
 import Contact from './pages/Contact';
 import KathyPage from './pages/KathyPage';
+import Museum from './pages/Museum';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/community" element={<Community />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/kathy" element={<KathyPage />} />
+            <Route path="/museum" element={<Museum />} />
           </Routes>
         </MusicPlayerProvider>
       </LanguageProvider>
