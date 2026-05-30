@@ -1,59 +1,39 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import Navigation from '../components/Navigation';
 import Hero from '../components/Hero';
 import Footer from '../components/Footer';
 import MusicPlayer from '../components/MusicPlayer';
 import {
-  Sparkles, Heart, Users, Calendar, Globe, Mail, Send,
-  ChevronRight, Star, Award, Camera, TrendingUp, Play,
-  Check, ExternalLink, Clock, Flame, Crown,
-  BadgeCheck, Edit3, User, Users2, CalendarCheck, HeartHandshake,
-  MessageCircle, MapPin, Link2, ChevronDown, X, Coffee, Gift, HeartHandshake as HeartIcon, Smile, Route, Menu, ArrowRight
+  Sparkles,
+  ChevronDown,
+  BadgeCheck,
+  Edit3,
+  User,
+  Users2,
+  CalendarCheck,
+  Crown,
+  HeartHandshake,
+  Send,
+  Check,
+  MapPin,
+  Link2,
+  Route,
+  Smile,
+  Calendar,
+  Globe,
+  Mail,
+  ArrowRight,
+  X,
+  ExternalLink,
+  Clock,
+  Star,
+  Flame,
+  Users,
+  TrendingUp,
+  Heart,
 } from 'lucide-react';
-
-const leeImages = [
-  '/images/lee/IMG_5109.JPG',
-  '/images/lee/IMG_5110.JPG',
-  '/images/lee/IMG_5111.JPG',
-  '/images/lee/IMG_5112.JPG',
-  '/images/lee/IMG_5113.JPG',
-  '/images/lee/IMG_5114.JPG',
-  '/images/lee/IMG_5115.JPG',
-  '/images/lee/IMG_5116.JPG',
-  '/images/lee/IMG_5117.JPG',
-  '/images/lee/IMG_5118.JPG',
-  '/images/lee/IMG_5119.JPG',
-  '/images/lee/IMG_5120.JPG',
-  '/images/lee/IMG_5121.JPG',
-  '/images/lee/IMG_5122.JPG',
-  '/images/lee/IMG_5123.JPG',
-  '/images/lee/IMG_5124.JPG',
-  '/images/lee/IMG_5125.JPG',
-  '/images/lee/IMG_5126.JPG',
-  '/images/lee/IMG_5127.JPG',
-  '/images/lee/IMG_5128.JPG',
-  '/images/lee/IMG_5129.JPG',
-  '/images/lee/IMG_5130.JPG',
-  '/images/lee/IMG_5131.JPG',
-  '/images/lee/IMG_5132.JPG',
-  '/images/lee/IMG_5133.JPG',
-  '/images/lee/IMG_5134.JPG',
-  '/images/lee/IMG_5135.JPG',
-  '/images/lee/IMG_5136.JPG',
-  '/images/lee/IMG_5137.JPG',
-  '/images/lee/IMG_5138.JPG',
-  '/images/lee/IMG_5139.JPG',
-  '/images/lee/IMG_5140.JPG',
-  '/images/lee/IMG_5141.JPG',
-  '/images/lee/IMG_5142.JPG',
-  '/images/lee/IMG_5143.JPG',
-  '/images/lee/IMG_5144.JPG',
-  '/images/lee/IMG_5145.JPG',
-  '/images/lee/IMG_5146.JPG',
-  '/images/lee/IMG_5147.JPG',
-];
 
 const kathyImages = [
   '/images/kathy/kathy-1.jpeg',
@@ -64,21 +44,12 @@ const kathyImages = [
 
 const News = () => {
   const { t } = useLanguage();
-  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [roleAccepted, setRoleAccepted] = useState(false);
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const [newsModalOpen, setNewsModalOpen] = useState(false);
   const [selectedNews, setSelectedNews] = useState<any>(null);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % leeImages.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -108,7 +79,6 @@ const News = () => {
     setSelectedNews(null);
   };
 
-  // Kathy full content sections for expandable area
   const kathyTimeline = [
     { year: '2020', event: 'First Message' },
     { year: '2021', event: 'First Meeting' },
@@ -128,13 +98,6 @@ const News = () => {
     { author: 'Fan_KR', message: 'Thank you for taking care of him!', time: '1 week ago' },
     { author: 'GlobalFan', message: 'We love you, Kathy! Welcome!', time: '2 weeks ago' },
     { author: 'Jupiter_US', message: 'You two are adorable together!', time: '3 weeks ago' },
-  ];
-
-  const kathyRoles = [
-    { title: 'Managing Editor', desc: 'Overseeing official communications and content' },
-    { title: 'Fans Mobilizer', desc: 'Coordinating fan events and community initiatives' },
-    { title: 'Partner Support', desc: 'Personal support and well-being assistance' },
-    { title: 'Cultural Bridge', desc: 'Connecting Korean and international fan communities' },
   ];
 
   return (
@@ -551,7 +514,7 @@ const News = () => {
                   </div>
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <span className="text-white font-semibold flex items-center gap-2">
-                      Read More <ChevronRight size={16} />
+                      Read More <ChevronDown size={16} className="rotate-90" />
                     </span>
                   </div>
                 </div>
@@ -589,7 +552,7 @@ const News = () => {
                     <p className="text-white font-medium">{update.title}</p>
                   </div>
                   <span className="text-white/30 text-sm">{update.date}</span>
-                  <ChevronRight size={20} className="text-white/30 group-hover:text-primary transition-colors" />
+                  <ChevronDown size={20} className="text-white/30 group-hover:text-primary transition-colors rotate-270" />
                 </div>
               ))}
             </div>
@@ -599,7 +562,7 @@ const News = () => {
         {/* SECTION 4: Upcoming Events */}
         <section className="py-16">
           <div className="flex items-center gap-3 mb-8">
-            <Calendar className="text-primary" />
+            <Calendar size={24} className="text-primary" />
             <h2 className="text-2xl font-bold text-white">Upcoming Events</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -655,7 +618,7 @@ const News = () => {
                   <span className="text-primary text-sm">{press.source} • {press.date}</span>
                   <p className="text-white font-medium mt-1">{press.title}</p>
                 </div>
-                <ChevronRight size={20} className="text-white/30 group-hover:text-primary transition-colors" />
+                <ChevronDown size={20} className="text-white/30 group-hover:text-primary transition-colors rotate-270" />
               </div>
             ))}
           </div>
@@ -738,14 +701,14 @@ const News = () => {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { value: '10M+', label: 'Total Fans', icon: <Users /> },
-                { value: '50+', label: 'Countries', icon: <Globe /> },
-                { value: '1M+', label: 'Active Members', icon: <Heart /> },
-                { value: '500+', label: 'Fan Clubs', icon: <Star /> },
+                { value: '10M+', label: 'Total Fans', icon: Users },
+                { value: '50+', label: 'Countries', icon: Globe },
+                { value: '1M+', label: 'Active Members', icon: Heart },
+                { value: '500+', label: 'Fan Clubs', icon: Star },
               ].map((stat, i) => (
                 <div key={i} className="text-center p-6 rounded-card bg-oled-base border border-oled-border cursor-pointer hover:border-primary transition-colors">
                   <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4 text-primary">
-                    {stat.icon}
+                    <stat.icon />
                   </div>
                   <p className="text-3xl font-bold text-primary">{stat.value}</p>
                   <p className="text-white/60 mt-2">{stat.label}</p>
@@ -772,7 +735,7 @@ const News = () => {
               <p className="text-white/50 text-sm mt-1">Join our fans</p>
             </Link>
             <Link to="/contact" className="p-6 rounded-card bg-oled-card border border-oled-border hover:border-primary transition-colors text-center group">
-              <MessageCircle className="text-primary mx-auto mb-3" size={32} />
+              <Mail className="text-primary mx-auto mb-3" size={32} />
               <h3 className="text-white font-semibold">Contact</h3>
               <p className="text-white/50 text-sm mt-1">Get in touch</p>
             </Link>
@@ -798,7 +761,7 @@ const News = () => {
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-btn bg-primary text-black font-semibold hover:bg-primary/90 transition-colors"
                 >
                   Learn More About Kathy
-                  <ChevronRight size={18} />
+                  <ChevronDown size={18} className="rotate-270" />
                 </button>
               </div>
               <div className="relative">
