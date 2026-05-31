@@ -1,5 +1,5 @@
 // Image mapping for LEE JUNHO official website
-// Organized by category for appropriate content representation
+// Using Lee's actual photos for all content
 
 export const images = {
   // Hero/Gallery - Lee's photos for main gallery
@@ -45,7 +45,7 @@ export const images = {
     '/images/lee/IMG_5147.JPG',
   ],
 
-  // Music Album Covers - Using Lee's photos as album art
+  // Music Album Covers - Lee's photos with album name styling
   music: {
     'Can I': '/images/lee/IMG_5115.JPG',
     'Nothing But You': '/images/lee/IMG_5118.JPG',
@@ -58,31 +58,31 @@ export const images = {
     'FEEL': '/images/lee/IMG_5140.JPG',
   },
 
-  // Filmography / Drama Posters - Using Lee's photos as posters
+  // Filmography Posters - Lee's photos styled as drama posters
   filmography: {
-    'Typhoon Family': '/images/lee/IMG_5110.JPG',
-    'Cashero': '/images/lee/IMG_5113.JPG',
-    'King the Land': '/images/lee/IMG_5116.JPG',
-    'The Red Sleeve': '/images/lee/IMG_5119.JPG',
-    'Confession': '/images/lee/IMG_5121.JPG',
-    'Rain or Shine': '/images/lee/IMG_5124.JPG',
-    'Good Manager': '/images/lee/IMG_5127.JPG',
-    'Cold Eyes': '/images/lee/IMG_5130.JPG',
-    'Twenty': '/images/lee/IMG_5133.JPG',
+    'Typhoon Family': '/images/lee/IMG_5113.JPG',
+    'Cashero': '/images/lee/IMG_5116.JPG',
+    'King the Land': '/images/lee/IMG_5119.JPG',
+    'The Red Sleeve': '/images/lee/IMG_5121.JPG',
+    'Confession': '/images/lee/IMG_5124.JPG',
+    'Rain or Shine': '/images/lee/IMG_5127.JPG',
+    'Good Manager': '/images/lee/IMG_5130.JPG',
+    'Cold Eyes': '/images/lee/IMG_5133.JPG',
+    'Twenty': '/images/lee/IMG_5136.JPG',
   },
 
-  // Awards - Using Lee's photos for award ceremonies
+  // Awards - Lee's photos from award ceremonies
   awards: {
-    'Baeksang Arts Awards': '/images/lee/IMG_5111.JPG',
+    'Baeksang Arts Awards': '/images/lee/IMG_5110.JPG',
     'KBS Drama Awards': '/images/lee/IMG_5114.JPG',
     'Blue Dragon Awards': '/images/lee/IMG_5117.JPG',
     'Asia Artist Awards': '/images/lee/IMG_5120.JPG',
     'MBC Drama Awards': '/images/lee/IMG_5123.JPG',
   },
 
-  // News Images - Using Lee's photos for news/events
+  // News Images
   news: {
-    'Typhoon Family': '/images/lee/IMG_5110.JPG',
+    'Typhoon Family': '/images/lee/IMG_5113.JPG',
     'Stunning Us': '/images/lee/IMG_5130.JPG',
     'Donation': '/images/lee/IMG_5135.JPG',
     '2PM Anniversary': '/images/lee/IMG_5140.JPG',
@@ -96,7 +96,7 @@ export const images = {
     action: '/images/lee/IMG_5120.JPG',
   },
 
-  // Fashion / Style images - Using Lee's photos
+  // Fashion / Style images
   fashion: [
     '/images/lee/IMG_5112.JPG',
     '/images/lee/IMG_5114.JPG',
@@ -105,9 +105,16 @@ export const images = {
     '/images/lee/IMG_5122.JPG',
     '/images/lee/IMG_5124.JPG',
   ],
+
+  // Concert/Fan Meeting images
+  concerts: {
+    'Stunning Us Seoul': '/images/lee/IMG_5109.JPG',
+    'Stunning Us Shanghai': '/images/lee/IMG_5130.JPG',
+    '2PM 17th Anniversary': '/images/lee/IMG_5142.JPG',
+  },
 };
 
-// Helper function to get image with fallback
+// Helper functions
 export const getImage = (category: keyof typeof images, key?: string): string => {
   if (typeof images[category] === 'object' && !Array.isArray(images[category])) {
     const categoryObj = images[category] as Record<string, string>;
@@ -129,42 +136,37 @@ export const getAwardImage = (awardName: string): string => {
   return images.awards[awardName] || images.hero[0];
 };
 
-// List of cover images that need to be uploaded
-export const requiredCovers = {
-  music: [
-    'music-can-i.jpg',
-    'music-nothing-but-you.jpg',
-    'music-canvas.jpg',
-    'music-fire.jpg',
-    'music-truelove.jpg',
-    'music-when-we-meet-again.jpg',
-    'music-nobody-else.jpg',
-    'music-two.jpg',
-    'music-feel.jpg',
-  ],
-  filmography: [
-    'film-typhoon-family.jpg',
-    'film-cashero.jpg',
-    'film-king-the-land.jpg',
-    'film-red-sleeve.jpg',
-    'film-confession.jpg',
-    'film-rain-or-shine.jpg',
-    'film-good-manager.jpg',
-    'film-cold-eyes.jpg',
-    'film-twenty.jpg',
-  ],
-  awards: [
-    'award-baeksang.jpg',
-    'award-kbs.jpg',
-    'award-blue-dragon.jpg',
-    'award-aaa.jpg',
-    'award-mbc.jpg',
-  ],
-  news: [
-    'news-typhoon-family.jpg',
-    'news-stunning-us.jpg',
-    'news-donation.jpg',
-    'news-2pm-anniversary.jpg',
-    'news-netflix.jpg',
-  ],
+// Music album metadata for styling
+export const musicAlbums = {
+  'Can I': { year: '2023', type: 'Single', duration: '3:45' },
+  'Nothing But You': { year: '2023', type: 'Single', duration: '4:12' },
+  'Canvas': { year: '2017', type: 'EP', duration: '18:30' },
+  'Fire': { year: '2015', type: 'Album', duration: '42:00' },
+  'Truelove': { year: '2014', type: 'Single', duration: '3:58' },
+  'When We Meet Again': { year: '2012', type: 'Single', duration: '4:05' },
+  'Nobody Else': { year: '2011', type: 'Single', duration: '3:52' },
+  'TWO': { year: '2010', type: 'EP', duration: '22:00' },
+  'FEEL': { year: '2009', type: 'Album', duration: '45:00' },
+};
+
+// Filmography metadata for styling
+export const filmographyData = {
+  'Typhoon Family': { year: '2025', role: 'Kang Tae-poong', network: 'tvN' },
+  'Cashero': { year: '2025', role: 'Lee Sang-hak', network: 'tvN' },
+  'King the Land': { year: '2023', role: 'Kwang Baek', network: 'tvN' },
+  'The Red Sleeve': { year: '2021', role: 'Yi San', network: 'MBC' },
+  'Confession': { year: '2019', role: 'Lee Hyun-woo', network: 'tvN' },
+  'Rain or Shine': { year: '2017', role: 'Do Ha-neul', network: 'MBC' },
+  'Good Manager': { year: '2017', role: 'Ga Dong-chae', network: 'MBC' },
+  'Cold Eyes': { year: '2013', role: 'Park Hye-min', network: 'Film' },
+  'Twenty': { year: '2015', role: 'Dae-woo', network: 'Film' },
+};
+
+// Awards metadata
+export const awardsData = {
+  'Baeksang Arts Awards': { year: '2024', category: 'Best Actor' },
+  'MBC Drama Awards': { year: '2021', category: 'Best Actor' },
+  'KBS Drama Awards': { year: '2021', category: 'Best Couple' },
+  'Blue Dragon Awards': { year: '2022', category: 'Popularity' },
+  'Asia Artist Awards': { year: '2023', category: 'K-Pop' },
 };
