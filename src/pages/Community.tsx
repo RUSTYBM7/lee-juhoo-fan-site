@@ -30,9 +30,10 @@ const Community = () => {
   ];
 
   const fanProjects = [
-    { title: 'Birthday Project 2024', participants: 1500, status: 'Active' },
-    { title: 'Global Fan Letter Campaign', participants: 3200, status: 'Ongoing' },
-    { title: 'Charity Drive for Education', participants: 890, status: 'Completed' },
+    { title: 'Stunning Us 2026', participants: 8500, status: 'Active' },
+    { title: 'Baeksang Celebration Project', participants: 12000, status: 'Ongoing' },
+    { title: 'Charity Donation - Wildfire Relief', participants: 5600, status: 'Completed' },
+    { title: '2PM 17th Anniversary Campaign', participants: 9500, status: 'Active' },
   ];
 
   const recentMessages = [

@@ -1,11 +1,5 @@
 import React, { createContext, useContext, useState, useCallback, useEffect, ReactNode } from 'react';
-
-interface MusicTrack {
-  id: string;
-  title: string;
-  artist: string;
-  duration: string;
-}
+import { defaultTracks, MusicTrack } from '../lib/musicData';
 
 interface MusicPlayerContextType {
   isPlaying: boolean;
@@ -13,6 +7,7 @@ interface MusicPlayerContextType {
   isShuffle: boolean;
   isRepeat: boolean;
   progress: number;
+  showVideoModal: boolean;
   togglePlay: () => void;
   play: () => void;
   pause: () => void;
@@ -22,15 +17,9 @@ interface MusicPlayerContextType {
   nextTrack: () => void;
   previousTrack: () => void;
   seek: (time: number) => void;
+  openVideoModal: () => void;
+  closeVideoModal: () => void;
 }
-
-const defaultTracks: MusicTrack[] = [
-  { id: '1', title: 'Heartbeat', artist: 'Lee Juhoo', duration: '3:45' },
-  { id: '2', title: 'Midnight Dreams', artist: 'Lee Juhoo', duration: '4:12' },
-  { id: '3', title: 'Starlight', artist: 'Lee Juhoo', duration: '3:58' },
-  { id: '4', title: 'Forever Young', artist: 'Lee Juhoo', duration: '4:30' },
-  { id: '5', title: 'Summer Breeze', artist: 'Lee Juhoo', duration: '3:22' },
-];
 
 const MusicPlayerContext = createContext<MusicPlayerContextType | undefined>(undefined);
 
@@ -41,10 +30,11 @@ export function MusicPlayerProvider({ children }: { children: ReactNode }) {
   const [isRepeat, setIsRepeat] = useState(false);
   const [progress, setProgress] = useState(0);
   const [trackIndex, setTrackIndex] = useState(0);
+  const [showVideoModal, setShowVideoModal] = useState(false);
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
-    if (isPlaying) {
+    if (isPlaying && !showVideoModal) {
       interval = setInterval(() => {
         setProgress((prev) => {
           if (prev >= 100) {
@@ -56,7 +46,7 @@ export function MusicPlayerProvider({ children }: { children: ReactNode }) {
       }, 500);
     }
     return () => clearInterval(interval);
-  }, [isPlaying]);
+  }, [isPlaying, showVideoModal]);
 
   const handleNext = useCallback(() => {
     if (isRepeat) {
@@ -99,12 +89,19 @@ export function MusicPlayerProvider({ children }: { children: ReactNode }) {
   const previousTrack = useCallback(() => handlePrevious(), [handlePrevious]);
   const seek = useCallback((time: number) => setProgress(time), []);
 
+  const openVideoModal = useCallback(() => setShowVideoModal(true), []);
+  const closeVideoModal = useCallback(() => {
+    setShowVideoModal(false);
+    setIsPlaying(false);
+  }, []);
+
   const value: MusicPlayerContextType = {
     isPlaying,
     currentTrack,
     isShuffle,
     isRepeat,
     progress,
+    showVideoModal,
     togglePlay,
     play,
     pause,
@@ -114,6 +111,8 @@ export function MusicPlayerProvider({ children }: { children: ReactNode }) {
     nextTrack,
     previousTrack,
     seek,
+    openVideoModal,
+    closeVideoModal,
   };
 
   return (

@@ -109,24 +109,24 @@ export const translations = {
     },
     news: {
       title: 'Latest News & Updates',
-      subtitle: 'Stay connected with Lee Juhoo Official',
+      subtitle: 'Stay connected with LEE JUNHO Official',
       kathyAnnouncement: {
         badge: 'Official Announcement',
         title: 'Kathy Hutchison: Official Role Announcement',
-        subtitle: 'Introducing the Managing Editor & Personal Manager',
-        description: 'We are thrilled to officially announce the appointment of Kathy Hutchison as the Managing Editor & Personal Manager of Lee Juhoo Official. This is a significant milestone in our journey, and we want to share this exciting news with our global fan community.',
+        subtitle: 'Managing Editor & Personal Manager',
+        description: 'We are thrilled to officially announce the appointment of Kathy Hutchison as the Managing Editor & Personal Manager of LEE JUNHO Official. This is a significant milestone in our journey, and we want to share this exciting news with our global fan community.',
         roleDetails: 'Kathy brings years of professional experience in entertainment management, digital strategy, and fan community building. Her role encompasses Event Management, Fan Relations, and Editorial Leadership.',
         keyResponsibilities: {
           title: 'Key Responsibilities',
           items: [
             'Managing Editor: Overseeing all official communications and content',
-            'Personal Manager: Supporting Lee Juhoo\'s professional activities and well-being',
+            'Personal Manager: Supporting LEE JUNHO\'s professional activities and well-being',
             'Event Manager: Organizing fan events, meet-ups, and special gatherings worldwide',
             'Fans Mobilizer: Building and nurturing our global fan community'
           ]
         },
         officialStatement: 'Official Statement from the Board',
-        statementText: '"The Lee Juhoo Official Board has unanimously approved this appointment. Kathy brings a unique combination of professional expertise and personal dedication. We believe this partnership will elevate our fan experience to unprecedented heights."',
+        statementText: '"The LEE JUNHO Official Board has unanimously approved this appointment. Kathy brings a unique combination of professional expertise and personal dedication. We believe this partnership will elevate our fan experience to unprecedented heights."',
         acceptRole: 'Accept Role Confirmation',
         acceptDescription: 'To confirm this role appointment, please connect with our team. Kathy will review and officially accept this prestigious position.',
         connectTeam: 'Connect with Team',
@@ -135,53 +135,71 @@ export const translations = {
       featuredNews: [
         {
           id: 1,
-          title: 'Lee Juhoo Wins Best Actor at 2024 Baeksang Arts Awards',
-          category: 'Awards',
-          date: '2024-05-14',
-          excerpt: 'Lee Juhoo has been honored with the prestigious Best Actor award at the 58th Baeksang Arts Awards for his outstanding performance in "Heartbeat".',
-          image: '/images/lee/IMG_5110.JPG',
+          title: 'LEE JUNHO Stars in "Typhoon Family" - A Heartwarming Family Drama',
+          category: 'Drama',
+          date: '2025-01-15',
+          excerpt: 'Following his Baeksang win, LEE JUNHO returns to the small screen in "Typhoon Family," a heartwarming family drama that showcases his evolved acting prowess.',
+          image: '/images/lee/IMG_5110.JPG',  // Lee photo
           featured: true
         },
         {
           id: 2,
-          title: 'World Tour 2024-2025 Announced',
-          category: 'Events',
-          date: '2024-05-10',
-          excerpt: 'Lee Juhoo will be embarking on his first world tour, visiting major cities across Asia, North America, and Europe.',
-          image: '/images/lee/IMG_5130.JPG',
+          title: '"Did You See The Rainbow?" - New OST for Typhoon Family Released',
+          category: 'Music',
+          date: '2025-01-20',
+          excerpt: 'LEE JUNHO releases emotional OST "Did You See The Rainbow?" for his drama "Typhoon Family." The song has already topped music charts across Asia.',
+          image: '/images/lee/IMG_5115.JPG',  // Lee photo
           featured: true
         },
         {
           id: 3,
-          title: 'New Drama Series Coming Summer 2024',
-          category: 'Projects',
-          date: '2024-05-05',
-          excerpt: 'Lee Juhoo stars in an exciting new drama series set to premiere this summer. Production is currently underway.',
-          image: '/images/lee/IMG_5115.JPG',
+          title: 'LEE JUNHO to Hold "Stunning Us" Fan Meeting in 2026',
+          category: 'Events',
+          date: '2025-11-10',
+          excerpt: 'After the success of "Junho the Moment," LEE JUNHO announces a new fan meeting tour "Stunning Us" scheduled for 2026 across major cities.',
+          image: '/images/lee/IMG_5120.JPG',  // Lee photo
           featured: false
         },
         {
           id: 4,
-          title: 'Charity Drive Success: $100K Raised',
+          title: 'Baeksang Award-Winner LEE JUNHO Cast in Netflix\'s "Kian\'s Bizarre B&B Season 2"',
+          category: 'Projects',
+          date: '2025-02-26',
+          excerpt: 'Following his historic Baeksang win, LEE JUNHO becomes the first Korean actor to appear on Brazil\'s SBT The Noite, now cast in Netflix\'s highly anticipated variety show.',
+          image: '/images/lee/IMG_5125.JPG',  // Lee photo
+          featured: false
+        },
+        {
+          id: 5,
+          title: 'LEE JUNHO Donates 100 Million Won for Wildfire Relief',
           category: 'Philanthropy',
-          date: '2024-04-28',
-          excerpt: 'The fan-organized charity drive was a tremendous success, raising over $100,000 for education initiatives.',
-          image: '/images/lee/IMG_5140.JPG',
+          date: '2025-03-15',
+          excerpt: 'Continuing his tradition of giving back, LEE JUNHO donated 100 million won to help victims of the devastating wildfires in South Gyeongsang Province.',
+          image: '/images/lee/IMG_5130.JPG',  // Lee photo
+          featured: false
+        },
+        {
+          id: 6,
+          title: '2PM Celebrates 17 Years with Special Album & Fan Events',
+          category: '2PM',
+          date: '2025-09-01',
+          excerpt: 'To commemorate 2PM\'s 17th anniversary, JYP Entertainment announces special album and fan meetings featuring all six members including LEE JUNHO.',
+          image: '/images/lee/IMG_5135.JPG',  // Lee photo
           featured: false
         }
       ],
       recentUpdates: [
-        { date: '2024-05-14', title: 'Congratulations to Lee Juhoo on Baeksang Award!' },
-        { date: '2024-05-10', title: 'Fan meeting in Seoul announced for June 2024' },
-        { date: '2024-05-05', title: 'New Instagram post from the set' },
-        { date: '2024-04-30', title: 'Behind the scenes video now available' },
-        { date: '2024-04-25', title: 'Merchandise pre-order now open' },
+        { date: '2026-01-15', title: '"Typhoon Family" ratings soar - LEE JUNHO praised for performance' },
+        { date: '2026-01-10', title: 'New fan club membership registration opens' },
+        { date: '2026-01-05', title: 'Behind the scenes from Typhoon Family set released' },
+        { date: '2025-12-20', title: 'LEE JUNHO year-end greeting video trending' },
+        { date: '2025-12-15', title: 'Merchandise pre-order for 2026 season\'s greetings now open' },
       ],
       upcomingEvents: [
-        { date: '2024-06-15', title: 'Fan Meeting - Seoul', location: 'Seoul, South Korea' },
-        { date: '2024-06-22', title: 'Fan Meeting - Tokyo', location: 'Tokyo, Japan' },
-        { date: '2024-07-01', title: 'World Tour Kickoff', location: 'Los Angeles, USA' },
-        { date: '2024-07-10', title: 'World Tour - Vancouver', location: 'Vancouver, Canada' },
+        { date: '2026-03-15', title: 'Fan Meeting - Seoul "Stunning Us"', location: 'Seoul, South Korea' },
+        { date: '2026-04-10', title: 'Fan Meeting - Shanghai "Always in Shanghai"', location: 'Shanghai, China' },
+        { date: '2026-06-20', title: 'Fan Meeting - Tokyo', location: 'Tokyo, Japan' },
+        { date: '2026-07-15', title: '2PM 17th Anniversary Fan Meeting', location: 'Seoul, South Korea' },
       ],
       socialHighlights: [
         { platform: 'Instagram', followers: '5.2M', trend: '+2.5%' },

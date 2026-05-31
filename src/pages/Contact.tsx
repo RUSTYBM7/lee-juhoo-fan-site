@@ -31,35 +31,35 @@ const Contact = () => {
       icon: <Mail />,
       title: t.contact.departments.general,
       email: 'contact@leejuhoo.com',
-      description: 'General inquiries and questions'
+      description: 'General inquiries and fan support'
     },
     {
       id: 'business',
       icon: <Briefcase />,
       title: t.contact.departments.business,
       email: 'business@leejuhoo.com',
-      description: 'Business partnerships and collaborations'
+      description: 'Endorsements, collaborations, and partnerships'
     },
     {
       id: 'media',
       icon: <Camera />,
       title: t.contact.departments.media,
       email: 'press@leejuhoo.com',
-      description: 'Media inquiries and interview requests'
+      description: 'Interview requests and media coverage'
     },
     {
       id: 'events',
       icon: <Calendar />,
-      title: 'Events',
+      title: 'Events & Fan Meetings',
       email: 'events@leejuhoo.com',
-      description: 'Event appearances and fan meetings'
+      description: 'Event appearances and fan meeting inquiries'
     },
     {
       id: 'legal',
       icon: <Scale />,
       title: 'Legal',
       email: 'legal@leejuhoo.com',
-      description: 'Legal matters and rights inquiries'
+      description: 'Rights inquiries and legal matters'
     },
     {
       id: 'kathy',
@@ -73,20 +73,24 @@ const Contact = () => {
 
   const faqs = [
     {
-      question: 'How can I meet Lee Juhoo?',
-      answer: 'We occasionally hold fan meetings and events. Follow our official social media for announcements about upcoming events.'
+      question: 'How can I attend LEE JUNHO\'s fan meetings?',
+      answer: 'We hold regular fan meetings like "Stunning Us" and "Always in Shanghai." Follow our official announcements for registration dates and how to join.'
     },
     {
-      question: 'How do I join the fan club?',
-      answer: 'Visit our Community page to sign up for our fan tier system and get exclusive benefits.'
+      question: 'How do I join the official fan club?',
+      answer: 'Visit our Community page to sign up for our fan tier system. Higher tiers get access to exclusive events and merchandise discounts.'
     },
     {
-      question: 'Can I use Lee Juhoo\'s photos for my fan project?',
-      answer: 'For fan projects, please reach out to us through the contact form. We\'ll try our best to support your efforts.'
+      question: 'Can I use LEE JUNHO\'s photos for fan projects?',
+      answer: 'For fan projects, please reach out to us through the contact form. We support our fans\' creative efforts within reasonable guidelines.'
     },
     {
-      question: 'How can I send a gift or letter to Lee Juhoo?',
-      answer: 'You can send messages through our Community page. Please note that physical gifts cannot be accepted.'
+      question: 'How can I send a message to LEE JUNHO?',
+      answer: 'You can send messages through our Community page. Kathy Hutchison, our Managing Editor, personally reviews fan messages and ensures your voice is heard.'
+    },
+    {
+      question: 'Is LEE JUNHO accepting fan letters?',
+      answer: 'Physical gifts cannot be accepted, but you can send heartfelt messages through our digital fan mail system on the Community page.'
     },
   ];
 
